@@ -1,45 +1,115 @@
+<div align="center">
+
 # GG Panel
 
-## Visão geral
+Painel web para gerenciamento de equipes, jogadores e torneios de e-sports.
 
-O GG Panel é uma aplicação web de gerenciamento de equipes e torneios de esportes eletrônicos. Ela permite que usuários autenticados visualizem e administrem times, jogadores, calendários de partidas e resultados, tudo em uma interface responsiva.
+![React](https://img.shields.io/badge/React-0D1117?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-0D1117?style=for-the-badge&logo=vite&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-0D1117?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-0D1117?style=for-the-badge&logo=express&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-0D1117?style=for-the-badge&logo=sqlite&logoColor=white)
 
-## Onde e como a aplicação é utilizada
+</div>
 
-- **Frontend**: desenvolvido com **React** e **Vite**, proporcionando recarga rápida durante o desenvolvimento e um bundle enxuto para produção.
-- **Backend**: construído em **Node.js** com **Express**, oferecendo rotas RESTful simples para autenticação, CRUD de recursos e integração com o banco de dados.
-- **Banco de dados**: utiliza **SQLite** para persistência de usuários, equipes, jogadores e torneios.
-- **Deploy**: pode ser hospedado em serviços como Vercel, Netlify (frontend) e Render, Railway ou Heroku (backend).
+---
 
-Decisões de arquitetura e escolha de tecnologias
+## `> sobre_o_projeto`
 
-- **React** – permite criar componentes reutilizáveis e gerenciar o estado da aplicação de forma declarativa; escolhido por sua popularidade e grande ecossistema.
-- **Vite** – substitui o tradicional Webpack, oferecendo tempos de start e build significativamente menores, ideal para um projeto em fase de prototipagem rápida.
-- **React Router** – controla a navegação entre páginas públicas (login, cadastro) e rotas protegidas (dashboard, times, torneios) com um componente `PrivateRoute` que verifica a sessão do usuário.
-- **Bootstrap + CSS** – fornece estilos consistentes e responsivos, enquanto as customizações de cores dão identidade visual ao projeto.
-- **Context API** – gerencia a autenticação (token JWT) de forma simples, evitando a necessidade de bibliotecas externas como Redux.
-- **Node/Express** – fornece uma camada de API leve e direta, facilitando a criação de rotas REST e a integração com o frontend via chamadas HTTP.
+O **GG Panel** é uma aplicação full stack criada para centralizar o gerenciamento de estruturas competitivas de e-sports. O sistema reúne informações de times, jogadores e torneios em uma interface web organizada e responsiva.
 
+## `> funcionalidades`
 
-Como executar o projeto localmente
+- Autenticação de usuários
+- Gerenciamento de equipes
+- Cadastro e gerenciamento de jogadores
+- Cadastro de torneios
+- Dashboard com informações gerais
+- Rotas protegidas no frontend
+- Comunicação entre frontend e API REST
+- Persistência local com SQLite
 
-- clonar o repositório
+## `> stack`
 
-git clone <url-do-repositorio>
-cd gg-panel
+### Frontend
 
-- backend
+- React
+- Vite
+- React Router
+- Axios
+- Bootstrap
+- Recharts
+- JWT Decode
 
+### Backend
+
+- Node.js
+- Express
+- better-sqlite3
+- bcryptjs
+- JSON Web Token
+- CORS
+
+## `> arquitetura`
+
+```text
+GG_panel/
+├── backend/
+│   ├── API REST
+│   └── SQLite
+├── frontend/
+│   ├── React
+│   └── Vite
+└── README.md
+```
+
+O frontend consome a API Express por HTTP, enquanto o backend concentra autenticação, regras da aplicação e persistência.
+
+## `> executando_localmente`
+
+### Backend
+
+```bash
 cd backend
 npm install
-npm run dev  -> roda o servidor na porta 3001 (ou a configurada)
+node index.js
+```
 
-- frontend (em outra janela)
+### Frontend
 
-cd ../frontend
+Em outro terminal:
+
+```bash
+cd frontend
 npm install
-npm run dev  -> abre a aplicação em http://localhost:5173
+npm run dev
+```
 
-## Observações
+O Vite disponibiliza o frontend normalmente em:
 
-- Acabei tentando implementar algumas funcionalidades mas não consegui adicionar todas as propostas e as que eu gostaria de colocar nesse modelo de projeto, devido ao tempo e por não ter todo o conhecimento para aprender e aplicar rapidamente as features e etc. De qualquer modo boa parte do projeto esta funcional e creio que atende o modelo proposto para o projeto.
+```text
+http://localhost:5173
+```
+
+## `> status`
+
+Projeto acadêmico funcional em evolução. Algumas funcionalidades planejadas ainda podem ser ampliadas ou refinadas, mas a versão atual já demonstra a integração entre frontend, backend, autenticação e banco de dados.
+
+## `> aprendizados`
+
+O projeto foi utilizado para consolidar conceitos de:
+
+- desenvolvimento full stack;
+- APIs REST;
+- autenticação JWT;
+- React e componentização;
+- persistência com SQLite;
+- organização de rotas e recursos de uma aplicação web.
+
+---
+
+<div align="center">
+
+Desenvolvido por **Pedro Henrique** · [@phz9ra](https://github.com/phz9ra)
+
+</div>
